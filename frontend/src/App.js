@@ -1,5 +1,5 @@
-import React from 'react';
-import Formulaire from './Formulaire';
+import React from 'react'
+import Formulaire from './Formulaire'
 
 const App = () => {
   return (
@@ -7,7 +7,7 @@ const App = () => {
       <h1>Inscription BonneBouffe</h1>
       <Formulaire />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

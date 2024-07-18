@@ -1,18 +1,18 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 const Formulaire = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm()
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/signup', data);
-      alert(response.data.message);
+      const response = await axios.post('http://localhost:5000/signup', data)
+      alert(response.data.message)
     } catch (error) {
-      console.error('Erreur réseau:', error);
+      console.error('Erreur réseau:', error)
     }
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -38,7 +38,7 @@ const Formulaire = () => {
       </div>
       <button type="submit">S'inscrire</button>
     </form>
-  );
-};
+  )
+}
 
-export default Formulaire;
+export default Formulaire
